@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    position: relative;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    padding-top: 25px;
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-top: 0px
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 0;
+    
+}
+
+nav ul li{
+    margin: 0 5px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+nav ul li a{
+    text-decoration: none;
+    padding:0.4rem 1.3rem;
+    font-weight:bold;
+    color:rgb(0, 0, 0);
+    position:relative;
+    z-index: 1;
+}
+nav ul li a::after{
+    content:"";
+    width: 0%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 20px;
+    z-index: -1;
+    transition: .3s;
+}
+.main-content{
+    width: 90%;
+    padding-top: 100px;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.image-home,.main-text{
+    flex-basis:50%
+}
+.image-home img{
+    width:100%;
+}
+.main-content h1{
+    font-size: 60px;
+    letter-spacing:1px;
+    color:white;
+}
+.main-content p{
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing:1px;
+    }
+.main-content button{
+    margin-top: 2.5rem;
+    outline:none;
+    border:navy;
+    font-size: .5rem 2.5rem .5rem 1rem;
+    border-radius: 0 50% 50% 0;
+    background-color: rgb(224, 31, 31);
+    color:black;
+    cursor:hand;
+
+
+}
+.swiper{
+    width:20rem;
+}
+.swiper-slide{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Header and Navigation Styles */
+header {
+    background-color: white;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #333;
+    text-decoration: underline;
+    position: relative;
+}
+
+.nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
